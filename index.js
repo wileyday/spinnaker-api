@@ -7,7 +7,12 @@ app.get('/', function (req, res) {
     console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
     console.log('body:', body);
-    res.send('Hello API! Version 2<br>' + body);
+    res.send(
+      'NodeJS Version: '
+      + process.version
+      + '<br>Hello API! Version 2<br>'
+      + body
+    );
   });
 });
 
