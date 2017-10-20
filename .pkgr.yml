@@ -4,5 +4,6 @@ targets:
     dependencies: 
       - nodejs 
       - npm
+      - telnet
 default_dependencies: false
 after_install: "postinstall.sh"
