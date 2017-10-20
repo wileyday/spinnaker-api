@@ -3,7 +3,7 @@ var app = express();
 var fetch = require('node-fetch');
 
 app.get('/', function (req, res) {
-  fetch('http://sendsms.kr/user')
+  fetch('http://private.sendsms.kr/user')
     .then(function(res) {
         return res.text();
     }).then(function(body) {
