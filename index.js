@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
-var fetch = require('node-fetch');
+var request = require('request');
 
 app.get('/', function (req, res) {
-  fetch('http://private.sendsms.kr/user')
-    .then(function(res) {
-        return res.text();
-    }).then(function(body) {
-        res.send('Hello API! Version 2<br>' + body);
-    });
+  request('http://private.sendsms.kr/user', function (error, response, body) {
+    console.log('error:', error);
+    console.log('statusCode:', response && response.statusCode);
+    console.log('body:', body);
+    res.send('Hello API! Version 2<br>' + body);
+  });
 });
 
 app.get('/healthcheck', function (req, res) {
