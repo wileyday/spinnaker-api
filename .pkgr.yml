@@ -5,5 +5,4 @@ targets:
       - npm
       - telnet
 default_dependencies: false
-before_install: "preinstall.sh"
 after_install: "postinstall.sh"
