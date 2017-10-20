@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
     .then(function(res) {
         return res.text();
     }).then(function(body) {
-        res.send('Hello API! Version 3<br>' + body);
+        res.send('Hello API! Version 4<br>' + body);
     });
 });
 
