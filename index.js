@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var request = require('request');
 
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
   request('http://private.sendsms.kr/user', function (error, response, body) {
     console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
